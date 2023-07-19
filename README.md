@@ -5,4 +5,7 @@
 
 ### Install and play example
 brain-even: https://asciinema.org/a/BS4We7INNB5QJEFrCBYX9nb0v
+
 brain-calc: https://asciinema.org/a/PNsqJzxc2qyrppLTDNSaKdY3r
+
+brain-gcd: https://asciinema.org/a/1lPJvqioNgZG1adPhTkfCT6oi

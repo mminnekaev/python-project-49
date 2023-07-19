@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from random import randint, choice
 
+
 def check_calc(name, n=3, start_num=1, end_num=99):
     """Generates random operations with integers n times and check answers"""
 
@@ -19,7 +20,7 @@ def check_calc(name, n=3, start_num=1, end_num=99):
             correct_answer = num_1 * num_2
 
         print(f"Question: {num_1} {operation} {num_2}")
-        answer = input(f"Your answer: ")
+        answer = input("Your answer: ")
 
         if answer == str(correct_answer):
             print("Correct!")

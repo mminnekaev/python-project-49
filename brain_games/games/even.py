@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from random import randint
 
+
 def check_even_number(name, n=3, start_num=1, end_num=99):
     """Generates random integer n times and check answers"""
 
