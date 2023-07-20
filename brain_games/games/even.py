@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import randint
+from .check_answer import check_answer
 
 
 def check_even_number(name, n=3, start_num=1, end_num=99):
@@ -17,12 +18,9 @@ def check_even_number(name, n=3, start_num=1, end_num=99):
         print(f"Question: {num}")
         answer = input("Your answer: ")
 
-        if answer == correct_answer:
-            print("Correct!")
-            n -= 1
-        else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.""")
-            print(f"""Let's try again, {name}!""")
+        if check_answer(answer, correct_answer, name) is False:
             return None
+        else:
+            n -= 1
 
     print(f"Congratulations, {name}!")

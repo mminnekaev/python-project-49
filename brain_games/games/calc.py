@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import randint, choice
+from .check_answer import check_answer
 
 
 def check_calc(name, n=3, start_num=1, end_num=99):
@@ -13,21 +14,18 @@ def check_calc(name, n=3, start_num=1, end_num=99):
         operation = choice(['+', '-', '*'])
 
         if operation == '+':
-            correct_answer = num_1 + num_2
+            correct_answer = str(num_1 + num_2)
         elif operation == '-':
-            correct_answer = num_1 - num_2
+            correct_answer = str(num_1 - num_2)
         elif operation == '*':
-            correct_answer = num_1 * num_2
+            correct_answer = str(num_1 * num_2)
 
         print(f"Question: {num_1} {operation} {num_2}")
         answer = input("Your answer: ")
 
-        if answer == str(correct_answer):
-            print("Correct!")
-            n -= 1
-        else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.""")
-            print(f"Let's try again, {name}!")
+        if check_answer(answer, correct_answer, name) is False:
             return None
+        else:
+            n -= 1
 
     print(f"Congratulations, {name}!")

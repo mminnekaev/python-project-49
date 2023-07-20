@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import randint
+from .check_answer import check_answer
 
 
 def find_gcd(num_1: int, num_2: int):
@@ -20,17 +21,14 @@ def check_gcd(name, n=3, start_num=1, end_num=99):
     while n > 0:
         num_1 = randint(start_num, end_num)
         num_2 = randint(start_num, end_num)
-        correct_answer = find_gcd(num_1, num_2)
+        correct_answer = str(find_gcd(num_1, num_2))
 
         print(f"Question: {num_1} {num_2}")
         answer = input("Your answer: ")
 
-        if answer == str(correct_answer):
-            print("Correct!")
-            n -= 1
-        else:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.""")
-            print(f"""Let's try again, {name}!""")
+        if check_answer(answer, correct_answer, name) is False:
             return None
+        else:
+            n -= 1
 
     print(f"Congratulations, {name}!")
