@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Hexlet python course first project"
 authors = ["Marat Minnekaev"]
+classifiers = [
+  "Private :: Do Not Upload"
+]
+repository = "https://github.com/mminnekaev/python-project-49/tree/main"
 readme = "README.md"
 packages = [
   { include = "brain_games" },
