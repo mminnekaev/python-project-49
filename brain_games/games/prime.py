@@ -27,3 +27,5 @@ def check_prime(name, n=3, start_num=1, end_num=99):
             return None
         else:
             n -= 1
+
+    print(f"Congratulations, {name}!")
