@@ -20,9 +20,10 @@ def check_progression(name, length=10, n=3):
         # modifying progression by dropping random element
         progression_int = list(map(lambda x: str(x), progression))
         missing_elem_num = randint(1, len(progression) - 1)
-        progression_with_missing_num = ' '.join(progression_int[: missing_elem_num]) \
-                                       + ' .. ' \
-                                       + ' '.join(progression_int[missing_elem_num + 1:])
+        progression_with_missing_num = \
+            ' '.join(progression_int[: missing_elem_num]) \
+            + ' .. ' \
+            + ' '.join(progression_int[missing_elem_num + 1:])
 
         correct_answer = progression_int[missing_elem_num]
 
