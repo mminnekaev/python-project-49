@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 def engine(player_name, questions, correct_answers, n):
     while n > 0:
-        question = questions[n-1]
-        correct_answer = correct_answers[n-1]
+        question = questions[n - 1]
+        correct_answer = correct_answers[n - 1]
         print(f"Question: {question}")
         answer = input("Your answer: ")
 
