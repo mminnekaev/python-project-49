@@ -3,13 +3,35 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c8859dd8e69bbdb03b49/maintainability)](https://codeclimate.com/github/mminnekaev/python-project-49/maintainability)
 
-### Install and play example
-brain-even: https://asciinema.org/a/BS4We7INNB5QJEFrCBYX9nb0v
+### Project description
+This is a command line game checking your basic skills in math. Answer 3 questions in different topics to succeed.
 
-brain-calc: https://asciinema.org/a/PNsqJzxc2qyrppLTDNSaKdY3r
+### How to install
+1. Download project: https://github.com/mminnekaev/python-project-49/archive/refs/heads/main.zip. Unzip the file.
+2. Open terminal, make sure you are in the `.../python-project-49/` directory, run following commands:
+   
+```
+make build
+make install
+make package-install
+```
+3. Now you can run each game by running following commands in terminal:
+```
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
 
-brain-gcd: https://asciinema.org/a/1lPJvqioNgZG1adPhTkfCT6oi
 
-brain-progression: https://asciinema.org/a/SPoxTH3SbYWHbIVB2BQeSmIgc
+### Gameplay example
+brain-even: [![asciicast](https://asciinema.org/a/EFBeCfhkEYfwcXw6k2bLKmpLj.png)](https://asciinema.org/a/EFBeCfhkEYfwcXw6k2bLKmpLj)
 
-brain-prime: https://asciinema.org/a/DsochBefRDbACm6eFECkk2oz2
+brain-calc: [![asciicast](https://asciinema.org/a/hbpq7Pw5sbztWCmyZx9kBAZsq.png)](https://asciinema.org/a/hbpq7Pw5sbztWCmyZx9kBAZsq)
+
+brain-gcd: [![asciicast](https://asciinema.org/a/3qUdX8e0Jix7xAiAQFGwyMaWd.png)](https://asciinema.org/a/3qUdX8e0Jix7xAiAQFGwyMaWd)
+
+brain-progression: [![asciicast](https://asciinema.org/a/I7yRg1tDSemd4gGXFQA0XlTZ3.png)](https://asciinema.org/a/I7yRg1tDSemd4gGXFQA0XlTZ3)
+
+brain-prime: [![asciicast](https://asciinema.org/a/SPT1uZOE3NXM2b2fmTX6U2tzq.png)](https://asciinema.org/a/SPT1uZOE3NXM2b2fmTX6U2tzq)

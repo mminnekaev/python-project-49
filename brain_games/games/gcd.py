@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from random import randint
-from .check_answer import check_answer
 
 
 def find_gcd(num_1: int, num_2: int):
@@ -13,22 +12,11 @@ def find_gcd(num_1: int, num_2: int):
     return gcd
 
 
-def check_gcd(name, n=3, start_num=1, end_num=99):
-    """Checks greatest common divisor"""
+def check_gcd(start_num=1, end_num=99):
+    """Generates pair of numbers and greatest common divisor"""
 
-    print("""Find the greatest common divisor of given numbers.""")
+    num_1 = randint(start_num, end_num)
+    num_2 = randint(start_num, end_num)
+    correct_answer = str(find_gcd(num_1, num_2))
 
-    while n > 0:
-        num_1 = randint(start_num, end_num)
-        num_2 = randint(start_num, end_num)
-        correct_answer = str(find_gcd(num_1, num_2))
-
-        print(f"Question: {num_1} {num_2}")
-        answer = input("Your answer: ")
-
-        if check_answer(answer, correct_answer, name) is False:
-            return None
-        else:
-            n -= 1
-
-    print(f"Congratulations, {name}!")
+    return str(num_1) + ' ' + str(num_2), correct_answer
