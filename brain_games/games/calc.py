@@ -19,4 +19,4 @@ def check_calc(start_num=1, end_num=99):
     elif operation == '*':
         correct_answer = str(num_1 * num_2)
 
-    return str(num_1) + ' ' + operation + ' ' + str(num_2), correct_answer
+    return f"{num_1} {operation} {num_2}", correct_answer

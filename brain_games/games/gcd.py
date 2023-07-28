@@ -22,4 +22,4 @@ def check_gcd(start_num=1, end_num=99):
     num_2 = randint(start_num, end_num)
     correct_answer = str(find_gcd(num_1, num_2))
 
-    return str(num_1) + ' ' + str(num_2), correct_answer
+    return f"{num_1} {num_2}", correct_answer

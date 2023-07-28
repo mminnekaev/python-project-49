@@ -1,14 +1,51 @@
 #!/usr/bin/env python3
-from .cli import welcome_user
+import prompt
+from .games import calc, even, gcd, prime, progression
 
 
-def run_game(questions, correct_answers, n, desc):
-    player_name = welcome_user()
-    print(desc)
+def generate_game_data(game_name):
+    """Checks game_name and returns question and correct_answer"""
 
+    if game_name == 'calc':
+        return calc.check_calc()
+    elif game_name == 'even':
+        return even.check_even_number()
+    elif game_name == 'gcd':
+        return gcd.check_gcd()
+    elif game_name == 'prime':
+        return prime.check_prime()
+    elif game_name == 'progression':
+        return progression.check_progression()
+    else:
+        return None
+
+
+def choose_description(game_name):
+    """Checks game_name and returns question and correct_answer"""
+
+    if game_name == 'calc':
+        return calc.DESCRIPTION
+    elif game_name == 'even':
+        return even.DESCRIPTION
+    elif game_name == 'gcd':
+        return gcd.DESCRIPTION
+    elif game_name == 'prime':
+        return prime.DESCRIPTION
+    elif game_name == 'progression':
+        return progression.DESCRIPTION
+    else:
+        return None
+
+
+def run_game(game_name, n=3):
+    # Greeting
+    print('Welcome to the Brain Games!')
+    player_name = prompt.string('May I have your name? ')
+    print(choose_description(game_name=game_name))
+
+    # Answering questions and checking answers
     while n > 0:
-        question = questions[n - 1]
-        correct_answer = correct_answers[n - 1]
+        question, correct_answer = generate_game_data(game_name=game_name)
         print(f"Question: {question}")
         answer = input("Your answer: ")
 
