@@ -2,6 +2,9 @@
 from random import randint
 
 
+DESCRIPTION = "What number is missing in the progression?"
+
+
 def generate_progression(start_num, step, length):
     progression = [i for i in range(start_num, start_num + length * step, step)]
     return progression

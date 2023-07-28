@@ -2,6 +2,9 @@
 from random import randint
 
 
+DESCRIPTION = """Find the greatest common divisor of given numbers."""
+
+
 def find_gcd(num_1: int, num_2: int):
     """Return the greatest common divisor of two integers"""
     min_num = max(num_1, num_2)

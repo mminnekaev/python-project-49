@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-from ..cli import welcome_user
-from ..games import engine, prime
+from ..games import prime
+from .. import engine
+
+
+N = 3
 
 
 def main():
-    name = welcome_user()
-    print("""Answer "yes" if given number is prime. Otherwise answer "no".""")
-    N = 3
     questions, correct_answers = zip(*[prime.check_prime() for i in range(N)])
-    engine.engine(player_name=name, questions=questions,
-                  correct_answers=correct_answers, n=N)
+    engine.run_game(questions=questions, correct_answers=correct_answers,
+                    n=N, desc=prime.DESCRIPTION)
 
 
 if __name__ == "__main__":

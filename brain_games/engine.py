@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-def engine(player_name, questions, correct_answers, n):
+from .cli import welcome_user
+
+
+def run_game(questions, correct_answers, n, desc):
+    player_name = welcome_user()
+    print(desc)
+
     while n > 0:
         question = questions[n - 1]
         correct_answer = correct_answers[n - 1]

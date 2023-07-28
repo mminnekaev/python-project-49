@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-from ..cli import welcome_user
-from ..games import engine, gcd
+from ..games import gcd
+from .. import engine
+
+
+N = 3
 
 
 def main():
-    name = welcome_user()
-    print("""Find the greatest common divisor of given numbers.""")
-    N = 3
     questions, correct_answers = zip(*[gcd.check_gcd() for i in range(N)])
-    engine.engine(player_name=name, questions=questions,
-                  correct_answers=correct_answers, n=N)
+    engine.run_game(questions=questions, correct_answers=correct_answers,
+                    n=N, desc=gcd.DESCRIPTION)
 
 
 if __name__ == "__main__":

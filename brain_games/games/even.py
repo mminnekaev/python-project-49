@@ -2,6 +2,9 @@
 from random import randint
 
 
+DESCRIPTION = """Answer "yes" if the number is even, otherwise answer "no"."""
+
+
 def check_even_number(start_num=1, end_num=99):
     """Generates random integer and correct answer"""
 
