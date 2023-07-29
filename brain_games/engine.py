@@ -45,6 +45,7 @@ def run_game(game_name, n=3):
     # Greeting
     print('Welcome to the Brain Games!')
     player_name = prompt.string('May I have your name? ')
+    print(f'Hello, {player_name}!')
     print(choose_description(game_name=game_name))
 
     # Answering questions and checking answers
