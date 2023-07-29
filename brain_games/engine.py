@@ -7,34 +7,38 @@ def generate_game_data(game_name):
     """Checks game_name and returns question and correct_answer"""
 
     if game_name == 'calc':
-        return calc.check_calc()
+        question, correct_answer = calc.check_calc()
     elif game_name == 'even':
-        return even.check_even_number()
+        question, correct_answer = even.check_even_number()
     elif game_name == 'gcd':
-        return gcd.check_gcd()
+        question, correct_answer = gcd.check_gcd()
     elif game_name == 'prime':
-        return prime.check_prime()
+        question, correct_answer = prime.check_prime()
     elif game_name == 'progression':
-        return progression.check_progression()
+        question, correct_answer = progression.check_progression()
     else:
         return None
+
+    return question, correct_answer
 
 
 def choose_description(game_name):
     """Checks game_name and returns question and correct_answer"""
 
     if game_name == 'calc':
-        return calc.DESCRIPTION
+        desc = calc.DESCRIPTION
     elif game_name == 'even':
-        return even.DESCRIPTION
+        desc = even.DESCRIPTION
     elif game_name == 'gcd':
-        return gcd.DESCRIPTION
+        desc = gcd.DESCRIPTION
     elif game_name == 'prime':
-        return prime.DESCRIPTION
+        desc = prime.DESCRIPTION
     elif game_name == 'progression':
-        return progression.DESCRIPTION
+        desc = progression.DESCRIPTION
     else:
-        return None
+        desc = None
+
+    return desc
 
 
 def run_game(game_name, n=3):
