@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from .. import engine
+from ..games import even
 
 
 def main():
-    engine.run_game(game_name='even')
+    even.run_even()
 
 
 if __name__ == "__main__":

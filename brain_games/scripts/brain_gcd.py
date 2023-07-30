@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from .. import engine
+from ..games import gcd
 
 
 def main():
-    engine.run_game(game_name='gcd')
+    gcd.run_gcd()
 
 
 if __name__ == "__main__":

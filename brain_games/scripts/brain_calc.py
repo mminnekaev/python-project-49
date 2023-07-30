@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from .. import engine
+from ..games import calc
 
 
 def main():
-    engine.run_game(game_name='calc')
+    calc.run_calc()
 
 
 if __name__ == "__main__":
