@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from ..games import prime
+from .. import engine
 
 
 def main():
-    prime.run_prime()
+    engine.run_game(prime)
 
 
 if __name__ == "__main__":

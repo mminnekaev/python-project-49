@@ -1,5 +1,4 @@
 from random import randint
-from ..engine import run_game
 
 
 DESCRIPTION = """Answer "yes" if the number is even, otherwise answer "no"."""
@@ -15,7 +14,3 @@ def generate_game_data(start_num=1, end_num=99):
         correct_answer = 'yes'
 
     return num, correct_answer
-
-
-def run_even():
-    return run_game(generate_game_data, DESCRIPTION)

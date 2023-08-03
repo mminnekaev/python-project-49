@@ -1,16 +1,14 @@
 from random import randint
-from ..engine import run_game
 
 
 DESCRIPTION = "What number is missing in the progression?"
 
 
 def generate_progression(start_num, step, length):
-    progression = [i for i in range(start_num, start_num + length * step, step)]
-    return progression
+    return [i for i in range(start_num, start_num + length * step, step)]
 
 
-def generate_game_data(length=10, n=3):
+def generate_game_data(length=10):
     """Generates progression and missing number in it"""
 
     # define progression parameters
@@ -28,7 +26,3 @@ def generate_game_data(length=10, n=3):
     progression_with_missing_num = ' '.join(progression_str)
 
     return progression_with_missing_num, correct_answer
-
-
-def run_progression():
-    return run_game(generate_game_data, DESCRIPTION)

@@ -1,16 +1,16 @@
 import prompt
 
 
-def run_game(game_data, desc, n=3):
+def run_game(game, n=3):
     # Greeting
     print('Welcome to the Brain Games!')
     player_name = prompt.string('May I have your name? ')
     print(f'Hello, {player_name}!')
-    print(desc)
+    print(game.DESCRIPTION)
 
     # Answering questions and checking answers
     for i in range(n):
-        question, correct_answer = game_data()
+        question, correct_answer = game.generate_game_data()
         print(f"Question: {question}")
         answer = input("Your answer: ")
 

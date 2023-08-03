@@ -1,5 +1,4 @@
 from random import randint
-from ..engine import run_game
 
 
 DESCRIPTION = """Find the greatest common divisor of given numbers."""
@@ -23,7 +22,3 @@ def generate_game_data(start_num=1, end_num=99):
     correct_answer = str(find_gcd(num_1, num_2))
 
     return f"{num_1} {num_2}", correct_answer
-
-
-def run_gcd():
-    return run_game(generate_game_data, DESCRIPTION)
