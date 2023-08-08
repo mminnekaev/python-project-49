@@ -16,8 +16,8 @@ def is_prime(number):
     return True
 
 
-def generate_game_data(start_num=1, end_num=99):
-    number = randint(start_num, end_num)
+def generate_game_data():
+    number = randint(1, 99)
     correct_answer = 'yes' if is_prime(number) else 'no'
 
     return number, correct_answer

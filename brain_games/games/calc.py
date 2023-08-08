@@ -4,11 +4,11 @@ from random import randint, choice
 DESCRIPTION = """What is the result of the expression?"""
 
 
-def generate_game_data(start_num=1, end_num=99):
+def generate_game_data():
     """Generates random operations with integers and check answers"""
 
-    num_1 = randint(start_num, end_num)
-    num_2 = randint(start_num, end_num)
+    num_1 = randint(1, 99)
+    num_2 = randint(1, 99)
     operation = choice(['+', '-', '*'])
 
     if operation == '+':

@@ -14,15 +14,14 @@ def generate_game_data(length=10):
     # define progression parameters
     start_num = randint(1, 99)
     step = randint(1, 10)
-    progression = generate_progression(start_num, step, length)
+    progression_items = generate_progression(start_num, step, length)
+    progression_items = list(map(str, progression_items))
 
     # modifying progression by dropping random element
-    progression_str = list(map(lambda x: str(x), progression))
+    missing_elem_num = randint(1, len(progression_items) - 1)
+    correct_answer = progression_items[missing_elem_num]
 
-    missing_elem_num = randint(1, len(progression) - 1)
-    correct_answer = progression_str[missing_elem_num]
-
-    progression_str[missing_elem_num] = '..'
-    progression_with_missing_num = ' '.join(progression_str)
+    progression_items[missing_elem_num] = '..'
+    progression_with_missing_num = ' '.join(progression_items)
 
     return progression_with_missing_num, correct_answer
